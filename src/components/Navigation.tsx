@@ -6,7 +6,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <img 
-            src="/lovable-uploads/1430ddd8-5f71-4fde-820e-e299509bed72.png" 
+            src="/lovable-uploads/85055af8-9fbe-413c-b63a-5e93488513a6.png" 
             alt="Needsolutions Logo" 
             className="h-10 w-auto"
           />

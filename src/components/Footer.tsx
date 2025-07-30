@@ -4,8 +4,12 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-6 h-6 bg-gradient-to-br from-accent to-primary rounded"></div>
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src="/lovable-uploads/85055af8-9fbe-413c-b63a-5e93488513a6.png" 
+                alt="Needsolutions Logo" 
+                className="h-8 w-auto"
+              />
               <span className="text-lg font-bold">Needsolutions</span>
             </div>
             <p className="text-background/80 text-sm">
