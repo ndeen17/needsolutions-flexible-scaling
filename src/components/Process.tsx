@@ -20,34 +20,37 @@ const Process = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-muted">
+    <section className="py-24 px-4 bg-muted/30">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-20">
+          <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+            Our Process
+          </span>
+          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
             How It Works
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Hours can be shuffled weekly between services. No need to hire multiple freelancers.
           </p>
         </div>
         
-        <div className="flex flex-col md:flex-row items-center justify-center max-w-5xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center justify-center max-w-6xl mx-auto gap-12">
           {steps.map((step, index) => (
-            <div key={index} className="flex flex-col md:flex-row items-center">
-              <div className="text-center mb-8 md:mb-0">
-                <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <step.icon className="w-10 h-10 text-primary-foreground" />
+            <div key={index} className="flex flex-col lg:flex-row items-center group">
+              <div className="text-center mb-8 lg:mb-0 flex-1">
+                <div className="w-24 h-24 bg-primary rounded-3xl flex items-center justify-center mb-8 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <step.icon className="w-12 h-12 text-primary-foreground" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-4 max-w-xs">
+                <h3 className="text-2xl font-bold text-foreground mb-6 max-w-xs mx-auto">
                   {step.title}
                 </h3>
-                <p className="text-muted-foreground max-w-xs">
+                <p className="text-muted-foreground max-w-xs mx-auto text-lg leading-relaxed">
                   {step.description}
                 </p>
               </div>
               
               {index < steps.length - 1 && (
-                <ArrowRight className="w-8 h-8 text-accent mx-8 my-8 md:my-0 transform md:transform-none rotate-90 md:rotate-0" />
+                <ArrowRight className="w-10 h-10 text-primary mx-8 my-8 lg:my-0 transform lg:transform-none rotate-90 lg:rotate-0 opacity-60" />
               )}
             </div>
           ))}
