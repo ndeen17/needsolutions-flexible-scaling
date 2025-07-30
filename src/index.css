@@ -40,11 +40,11 @@
     --ring: 25 95% 53%;
     
     /* Custom design tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(25 95% 53%), hsl(0 0% 9%));
+    --hero-bg: hsl(var(--primary));
     --card-shadow: 0 4px 20px -2px hsl(25 95% 53% / 0.1);
     --card-shadow-hover: 0 8px 30px -4px hsl(25 95% 53% / 0.15);
-    --popular-gradient: linear-gradient(135deg, hsl(0 0% 9%), hsl(25 95% 53%));
-    --stats-gradient: linear-gradient(180deg, hsl(220 10% 98%), hsl(25 95% 95%));
+    --popular-bg: hsl(var(--accent));
+    --stats-bg: hsl(var(--secondary));
     
     /* Animation */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
