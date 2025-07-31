@@ -5,27 +5,27 @@ const PuzzleBackground = () => {
 
   useEffect(() => {
     const animationSequence = async () => {
-      // Start scattered for 2 seconds
+      // Start scattered for 3 seconds
       setAnimationState('scattered');
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Approach and connect over 3 seconds
-      setAnimationState('approaching');
       await new Promise(resolve => setTimeout(resolve, 3000));
       
-      // Stay connected for 2 seconds
-      setAnimationState('connected');
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Approach and connect over 4 seconds (slower)
+      setAnimationState('approaching');
+      await new Promise(resolve => setTimeout(resolve, 4000));
       
-      // Separate over 2 seconds
+      // Stay connected for 3 seconds
+      setAnimationState('connected');
+      await new Promise(resolve => setTimeout(resolve, 3000));
+      
+      // Separate over 4 seconds (slower)
       setAnimationState('separating');
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 4000));
     };
 
     const runSequence = () => {
       animationSequence().then(() => {
-        // Restart the sequence
-        setTimeout(runSequence, 1000);
+        // Restart the sequence with longer pause
+        setTimeout(runSequence, 2000);
       });
     };
 
@@ -97,14 +97,18 @@ const PuzzleBackground = () => {
 
     return (
       <div
-        className="absolute transition-all duration-[2500ms] ease-out"
+        className="absolute transition-all duration-[4000ms] ease-out"
         style={{
           left: `${pos.x}%`,
           top: `${pos.y}%`,
           transform: `translate(-50%, -50%) rotate(${pos.rotation}deg) scale(${pos.scale})`,
           opacity: pos.opacity,
           transitionDelay: `${delay}ms`,
-          transitionTimingFunction: animationState === 'approaching' ? 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' : 'cubic-bezier(0.55, 0.085, 0.68, 0.53)',
+          transitionTimingFunction: animationState === 'approaching' 
+            ? 'cubic-bezier(0.23, 1, 0.32, 1)' 
+            : animationState === 'separating'
+            ? 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'
+            : 'cubic-bezier(0.4, 0, 0.2, 1)',
           filter: isConnected ? 'drop-shadow(0 0 20px hsl(var(--primary) / 0.6))' : 'drop-shadow(0 4px 8px rgba(0,0,0,0.1))',
         }}
       >
@@ -183,9 +187,9 @@ const PuzzleBackground = () => {
         <div
           className="absolute transition-all duration-1000 opacity-30"
           style={{
-            left: '35%',
-            top: '40%',
-            width: '30%',
+            left: '43%',
+            top: '45%',
+            width: '14%',
             height: '2px',
             background: 'linear-gradient(90deg, transparent, hsl(var(--primary)), hsl(var(--primary)), transparent)',
             animation: 'pulse-glow 2s ease-in-out infinite',
@@ -196,9 +200,9 @@ const PuzzleBackground = () => {
           className="absolute transition-all duration-1000 opacity-30"
           style={{
             left: '50%',
-            top: '25%',
+            top: '38%',
             width: '2px',
-            height: '30%',
+            height: '14%',
             background: 'linear-gradient(180deg, transparent, hsl(var(--primary)), hsl(var(--primary)), transparent)',
             animation: 'pulse-glow 2s ease-in-out infinite',
           }}
@@ -208,13 +212,13 @@ const PuzzleBackground = () => {
           className="absolute transition-all duration-1000"
           style={{
             left: '50%',
-            top: '40%',
-            width: '8px',
-            height: '8px',
+            top: '45%',
+            width: '6px',
+            height: '6px',
             background: 'hsl(var(--primary))',
             borderRadius: '50%',
             transform: 'translate(-50%, -50%)',
-            boxShadow: '0 0 20px hsl(var(--primary) / 0.8)',
+            boxShadow: '0 0 15px hsl(var(--primary) / 0.6)',
             animation: 'pulse-bright 1.5s ease-in-out infinite',
           }}
         />
@@ -232,60 +236,45 @@ const PuzzleBackground = () => {
       <FloatingParticle x={10} y={50} delay={3} size={10} />
       <FloatingParticle x={90} y={55} delay={5} size={15} />
 
-      {/* Main puzzle pieces */}
+      {/* Main puzzle pieces - designed to interlock perfectly */}
+      {/* Top-left piece with right knob and bottom knob */}
       <PuzzlePiece
         piece={1}
         scatteredPos={{ x: 15, y: 20, rotation: -45 }}
-        connectedPos={{ x: 42, y: 35, rotation: 0 }}
+        connectedPos={{ x: 45, y: 40, rotation: 0 }}
         color="hsl(var(--primary))"
-        shape="M20,20 L80,20 C90,15 100,25 90,35 L90,50 C100,50 110,60 100,70 C90,70 90,85 80,80 L20,80 L20,70 C10,70 0,60 10,50 C20,50 20,35 10,25 C0,15 10,15 20,20 Z"
+        shape="M20,20 L50,20 L50,35 C55,30 65,30 70,35 C65,40 55,40 50,35 L50,50 L35,50 C30,55 30,65 35,70 C40,65 40,55 35,50 L20,50 L20,20 Z"
         delay={0}
       />
       
+      {/* Top-right piece with left socket and bottom knob */}
       <PuzzlePiece
         piece={2}
         scatteredPos={{ x: 85, y: 15, rotation: 180 }}
-        connectedPos={{ x: 58, y: 35, rotation: 0 }}
+        connectedPos={{ x: 55, y: 40, rotation: 0 }}
         color="hsl(var(--primary))"
-        shape="M20,20 L80,80 L20,80 C10,85 0,75 10,65 L10,50 C0,50 -10,40 0,30 C10,30 10,15 20,20 Z"
-        delay={200}
+        shape="M50,20 L80,20 L80,50 L65,50 C70,55 70,65 65,70 C60,65 60,55 65,50 L50,50 L50,35 C45,40 35,40 30,35 C35,30 45,30 50,35 L50,20 Z"
+        delay={100}
       />
       
+      {/* Bottom-left piece with right knob and top socket */}
       <PuzzlePiece
         piece={3}
         scatteredPos={{ x: 20, y: 80, rotation: 90 }}
-        connectedPos={{ x: 42, y: 50, rotation: 0 }}
+        connectedPos={{ x: 45, y: 50, rotation: 0 }}
         color="hsl(var(--primary))"
-        shape="M20,20 L80,20 C90,15 100,25 90,35 L90,80 L20,80 L20,65 C10,65 0,55 10,45 C20,45 20,30 20,20 Z"
-        delay={400}
+        shape="M20,50 L35,50 C30,45 30,35 35,30 C40,35 40,45 35,50 L50,50 L50,65 C55,60 65,60 70,65 C65,70 55,70 50,65 L50,80 L20,80 L20,50 Z"
+        delay={200}
       />
       
+      {/* Bottom-right piece with left socket and top socket */}
       <PuzzlePiece
         piece={4}
         scatteredPos={{ x: 90, y: 75, rotation: -90 }}
-        connectedPos={{ x: 58, y: 50, rotation: 0 }}
+        connectedPos={{ x: 55, y: 50, rotation: 0 }}
         color="hsl(var(--primary))"
-        shape="M20,20 L80,20 L80,35 C90,35 100,45 90,55 C80,55 80,70 80,80 L20,80 L20,65 C10,70 0,60 10,50 C20,50 20,35 10,25 C0,15 10,15 20,20 Z"
-        delay={600}
-      />
-
-      {/* Secondary accent pieces */}
-      <PuzzlePiece
-        piece={5}
-        scatteredPos={{ x: 5, y: 45, rotation: 135 }}
-        connectedPos={{ x: 35, y: 60, rotation: 0 }}
-        color="hsl(var(--accent))"
-        shape="M30,30 L70,30 C80,25 90,35 80,45 L80,70 L30,70 Z"
-        delay={800}
-      />
-      
-      <PuzzlePiece
-        piece={6}
-        scatteredPos={{ x: 95, y: 40, rotation: -135 }}
-        connectedPos={{ x: 65, y: 60, rotation: 0 }}
-        color="hsl(var(--accent))"
-        shape="M30,30 L70,70 L30,70 C20,75 10,65 20,55 L20,40 C10,40 0,30 10,20 C20,20 20,25 30,30 Z"
-        delay={1000}
+        shape="M50,50 L65,50 C70,45 70,35 65,30 C60,35 60,45 65,50 L80,50 L80,80 L50,80 L50,65 C45,70 35,70 30,65 C35,60 45,60 50,65 L50,50 Z"
+        delay={300}
       />
 
       {/* Connection lines and effects */}
