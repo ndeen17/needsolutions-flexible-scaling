@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="container mx-auto text-center max-w-5xl">
         <div className="mb-8">
           <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-            #1 Virtual Assistant Agency
+            We fit the missing piece in your business
           </span>
         </div>
         
@@ -17,7 +17,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-4xl mx-auto">
-          Scale your business with our team of designers, developers, writers, and video editors. 
+          We are your business support system with our team of designers, developers, writers, and video editors. 
           <strong className="text-foreground"> Flexible hours, managed for you.</strong>
         </p>
         
