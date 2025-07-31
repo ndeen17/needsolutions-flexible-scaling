@@ -8,7 +8,7 @@ const Navigation = () => {
           <img 
             src="/lovable-uploads/c0261460-6ce1-41c1-b6f0-11e4e1455e50.png" 
             alt="Needsolutions Logo" 
-            className="h-10 w-auto"
+            className="h-12 w-auto"
           />
           <span className="text-xl font-bold text-foreground">Needsolutions</span>
         </div>
