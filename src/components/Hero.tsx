@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar } from "lucide-react";
+import PuzzleBackground from "./PuzzleBackground";
 
 const Hero = () => {
   return (
-    <section id="home" className="pt-28 pb-20 px-4 bg-background">
-      <div className="container mx-auto text-center max-w-5xl">
+    <section id="home" className="pt-28 pb-20 px-4 bg-background relative overflow-hidden">
+      <PuzzleBackground />
+      <div className="container mx-auto text-center max-w-5xl relative z-10">
         <div className="mb-8">
           <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
             We fit the missing piece in your business
