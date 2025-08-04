@@ -6,7 +6,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="/lovable-uploads/aa1ddb8c-4cf1-46a2-8d86-4be42caf8e54.png" 
+                src="/lovable-uploads/666f4845-30e1-4a1f-af4e-e6ceecb1c94e.png" 
                 alt="Needsolutions Logo" 
                 className="h-8 w-auto"
               />
