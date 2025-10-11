@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,31 +19,31 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2 md:space-x-3">
+          <Link to="/" className="flex items-center space-x-2 md:space-x-3">
             <img 
               src="/lovable-uploads/666f4845-30e1-4a1f-af4e-e6ceecb1c94e.png" 
               alt="Needsolutions Logo" 
               className="h-8 md:h-12 w-auto"
             />
             <span className="text-lg md:text-xl font-bold text-foreground">Needsolutions</span>
-          </div>
+          </Link>
           
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <a href="#home" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link to="/" className="text-foreground hover:text-primary transition-colors font-medium">
               Home
-            </a>
-            <a href="#services" className="text-foreground hover:text-primary transition-colors font-medium">
+            </Link>
+            <Link to="/team" className="text-foreground hover:text-primary transition-colors font-medium">
+              Our Team
+            </Link>
+            <a href="/#services" className="text-foreground hover:text-primary transition-colors font-medium">
               Services
             </a>
-            <a href="#why-us" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link to="/about" className="text-foreground hover:text-primary transition-colors font-medium">
               Why Us
-            </a>
-            <a href="#pricing" className="text-foreground hover:text-primary transition-colors font-medium">
+            </Link>
+            <a href="/#pricing" className="text-foreground hover:text-primary transition-colors font-medium">
               Pricing
-            </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">
-              Contact
             </a>
           </div>
           
@@ -67,40 +68,40 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border shadow-lg">
             <div className="container mx-auto px-4 py-4 space-y-4">
-              <a 
-                href="#home" 
+              <Link 
+                to="/" 
                 className="block text-foreground hover:text-primary transition-colors font-medium py-2"
                 onClick={handleLinkClick}
               >
                 Home
-              </a>
+              </Link>
+              <Link 
+                to="/team" 
+                className="block text-foreground hover:text-primary transition-colors font-medium py-2"
+                onClick={handleLinkClick}
+              >
+                Our Team
+              </Link>
               <a 
-                href="#services" 
+                href="/#services" 
                 className="block text-foreground hover:text-primary transition-colors font-medium py-2"
                 onClick={handleLinkClick}
               >
                 Services
               </a>
-              <a 
-                href="#why-us" 
+              <Link 
+                to="/about" 
                 className="block text-foreground hover:text-primary transition-colors font-medium py-2"
                 onClick={handleLinkClick}
               >
                 Why Us
-              </a>
+              </Link>
               <a 
-                href="#pricing" 
+                href="/#pricing" 
                 className="block text-foreground hover:text-primary transition-colors font-medium py-2"
                 onClick={handleLinkClick}
               >
                 Pricing
-              </a>
-              <a 
-                href="#contact" 
-                className="block text-foreground hover:text-primary transition-colors font-medium py-2"
-                onClick={handleLinkClick}
-              >
-                Contact
               </a>
               <div className="pt-4 border-t border-border">
                 <Button 
