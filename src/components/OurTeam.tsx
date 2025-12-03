@@ -4,7 +4,6 @@ import {
   Palette, 
   Edit3, 
   Globe, 
-  Video, 
   CheckSquare,
   User,
   CheckCircle,
@@ -15,7 +14,8 @@ import {
   DollarSign,
   ArrowRight,
   Calendar,
-  TrendingUp
+  TrendingUp,
+  Sparkles
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import TeamHub from "./TeamHub";
@@ -46,6 +46,17 @@ const OurTeam = () => {
 
   const teamCategories = [
     {
+      icon: Sparkles,
+      title: "AI Automation Team",
+      description: "AI specialists who integrate cutting-edge automation into your workflows. We leverage AI for speed, then refine with human expertise.",
+      features: [
+        "AI workflow automation",
+        "ChatGPT integration experts",
+        "Custom AI tool development",
+        "Process optimization specialists"
+      ]
+    },
+    {
       icon: Code,
       title: "Development Team",
       description: "Full-stack developers, mobile app experts, and API specialists ready to build your digital solutions.",
@@ -68,26 +79,25 @@ const OurTeam = () => {
       ]
     },
     {
+      icon: TrendingUp,
+      title: "Digital Marketing Team",
+      description: "Marketing strategists who drive growth across all digital channels using AI-powered analytics and human creativity.",
+      features: [
+        "Social media managers",
+        "Ad campaign specialists",
+        "Marketing strategists",
+        "Analytics experts"
+      ]
+    },
+    {
       icon: Edit3,
       title: "Content Team",
-      description: "Writers and SEO experts who craft compelling content that ranks well and converts visitors into customers.",
+      description: "Writers and SEO experts who craft compelling content that ranks well and converts visitors into customers. AI drafts, humans perfect.",
       features: [
         "Technical writers",
         "SEO specialists",
         "Copywriters",
-        "Content strategists",
-        "Social media experts"
-      ]
-    },
-    {
-      icon: Video,
-      title: "Video Team",
-      description: "Video professionals who create engaging content for social media, marketing, and educational purposes.",
-      features: [
-        "Video editors",
-        "Motion graphics designers",
-        "Color grading experts",
-        "Sound designers"
+        "Content strategists"
       ]
     },
     {
@@ -146,11 +156,11 @@ const OurTeam = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-8 leading-tight">
-            Meet Your <span className="text-primary">Extended Team</span>
+            Meet Your <span className="text-primary">AI + Human</span> Extended Team
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-4xl mx-auto">
-            Every member of our team is carefully selected, continuously trained, and passionate about helping your business succeed. With specialists across 6 core disciplines, we have the right expert for every task.
+            Every member of our team is carefully selected, continuously trained, and equipped with AI tools to deliver faster results. With specialists across 6 core disciplines powered by AI automation, we prioritize <strong className="text-foreground">speed and accuracy</strong> in every task.
           </p>
         </div>
       </section>
@@ -300,13 +310,17 @@ const OurTeam = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button variant="secondary" size="lg" className="w-full sm:w-auto bg-background text-primary hover:bg-background/90 text-lg px-8 py-4 h-auto">
-              Build Your Team
-              <ArrowRight className="ml-2" />
+            <Button variant="secondary" size="lg" className="w-full sm:w-auto bg-background text-primary hover:bg-background/90 text-lg px-8 py-4 h-auto" asChild>
+              <a href="https://calendly.com/angellawretta/30min" target="_blank" rel="noopener noreferrer">
+                Build Your Team
+                <ArrowRight className="ml-2" />
+              </a>
             </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-8 py-4 h-auto">
-              <Calendar className="mr-2" />
-              View Services
+            <Button variant="outline" size="lg" className="w-full sm:w-auto border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-8 py-4 h-auto" asChild>
+              <a href="https://calendly.com/angellawretta/30min" target="_blank" rel="noopener noreferrer">
+                <Calendar className="mr-2" />
+                Schedule a Call
+              </a>
             </Button>
           </div>
         </div>

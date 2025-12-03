@@ -7,23 +7,22 @@ import {
   Code,
   Palette,
   Edit3,
-  Video,
   FileText,
-  Briefcase,
   ArrowRight,
-  Calendar
+  Calendar,
+  Sparkles
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import TeamHub from "./TeamHub";
 
 const WhyUs = () => {
   const teamMembers = [
+    { icon: Code, title: "AI Specialists" },
     { icon: Code, title: "Software Developers" },
     { icon: Palette, title: "Graphic Designers" },
     { icon: Edit3, title: "Content Writers" },
-    { icon: Video, title: "Video Editors" },
-    { icon: FileText, title: "Admin Specialists" },
-    { icon: Briefcase, title: "Project Managers" }
+    { icon: TrendingUp, title: "Digital Marketers" },
+    { icon: FileText, title: "Admin Specialists" }
   ];
 
   return (
@@ -66,9 +65,15 @@ const WhyUs = () => {
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 Need a designer this week but a developer next week? Traditional freelancers couldn't help. Want to shift hours between team members as priorities change? Not possible with the old model.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 So we built something different. A flexible team model where your hours adapt to your needs, managed by dedicated project managers who ensure quality and consistency across all tasks.
               </p>
+              <div className="mt-8 p-6 bg-primary/10 rounded-2xl border-2 border-primary/20">
+                <h3 className="text-xl font-bold text-foreground mb-3">AI + Human Workforce</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  We integrate AI into our services for maximum speed and efficiency. AI handles basic tasks and drafts, then our skilled specialists review and enhance everything for accuracy and quality. You get the best of both worlds: <strong className="text-foreground">AI for speed, humans for perfection.</strong>
+                </p>
+              </div>
             </div>
             <div className="flex justify-center">
               <div className="w-96 h-96">
@@ -192,10 +197,10 @@ const WhyUs = () => {
         <div className="container mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Your <span className="text-primary">Extended Team</span>
+              Your <span className="text-primary">AI + Human</span> Extended Team
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              We have specialists across all key disciplines, ready to tackle any task. Every team member is carefully vetted, continuously trained, and dedicated to delivering exceptional work.
+              We combine AI automation with human expertise across all key disciplines. Every team member is carefully vetted, continuously trained, and empowered with AI tools to deliver exceptional work faster.
             </p>
           </div>
           
@@ -227,13 +232,17 @@ const WhyUs = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button variant="secondary" size="lg" className="w-full sm:w-auto bg-background text-primary hover:bg-background/90 text-lg px-8 py-4 h-auto">
-              Start Your Journey
-              <ArrowRight className="ml-2" />
+            <Button variant="secondary" size="lg" className="w-full sm:w-auto bg-background text-primary hover:bg-background/90 text-lg px-8 py-4 h-auto" asChild>
+              <a href="https://calendly.com/angellawretta/30min" target="_blank" rel="noopener noreferrer">
+                Start Your Journey
+                <ArrowRight className="ml-2" />
+              </a>
             </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-8 py-4 h-auto">
-              <Calendar className="mr-2" />
-              Schedule a Call
+            <Button variant="outline" size="lg" className="w-full sm:w-auto border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-8 py-4 h-auto" asChild>
+              <a href="https://calendly.com/angellawretta/30min" target="_blank" rel="noopener noreferrer">
+                <Calendar className="mr-2" />
+                Schedule a Call
+              </a>
             </Button>
           </div>
         </div>

@@ -18,19 +18,29 @@ const Hero = () => {
           <span className="text-primary"> Is Ready</span>
         </h1>
         
+        <div className="mb-8">
+          <span className="inline-block px-6 py-3 bg-gradient-to-r from-primary/20 to-primary/10 border-2 border-primary/30 text-primary rounded-full text-lg font-bold">
+            AI + Human Workforce
+          </span>
+        </div>
+        
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-4xl mx-auto">
-          We are your business support system with our team of designers, developers, writers, and video editors. 
-          <strong className="text-foreground"> Flexible hours, managed for you.</strong>
+          We combine <strong className="text-foreground">AI speed</strong> with <strong className="text-foreground">human expertise</strong>. Our AI handles basic tasks instantly, while our skilled specialists review and enhance for perfect results. 
+          <strong className="text-foreground"> Speed and accuracy, guaranteed.</strong>
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
-          <Button size="lg" className="w-full sm:w-auto text-lg px-8 py-4 h-auto">
-            Get Started Today
-            <ArrowRight className="ml-2" />
+          <Button size="lg" className="w-full sm:w-auto text-lg px-8 py-4 h-auto" asChild>
+            <a href="https://calendly.com/angellawretta/30min" target="_blank" rel="noopener noreferrer">
+              Get Started Today
+              <ArrowRight className="ml-2" />
+            </a>
           </Button>
-          <Button variant="outline" size="lg" className="w-full sm:w-auto text-lg px-8 py-4 h-auto">
-            <Calendar className="mr-2" />
-            Schedule a Free Consultation
+          <Button variant="outline" size="lg" className="w-full sm:w-auto text-lg px-8 py-4 h-auto" asChild>
+            <a href="https://calendly.com/angellawretta/30min" target="_blank" rel="noopener noreferrer">
+              <Calendar className="mr-2" />
+              Schedule a Free Consultation
+            </a>
           </Button>
         </div>
         

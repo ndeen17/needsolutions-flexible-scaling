@@ -4,9 +4,10 @@ import {
   Palette, 
   Edit3, 
   Globe, 
-  Video, 
+  TrendingUp, 
   CheckSquare,
-  User
+  User,
+  Sparkles
 } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
 
@@ -43,43 +44,43 @@ const TeamHub = () => {
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([
     {
       id: 1,
-      role: "Software Dev",
-      icon: Code,
+      role: "AI Automation",
+      icon: Sparkles,
       status: "Available",
       position: { x: 20, y: 20 }
     },
     {
       id: 2,
-      role: "Graphic Design",
-      icon: Palette,
+      role: "Software Dev",
+      icon: Code,
       status: "Available",
       position: { x: 80, y: 20 }
     },
     {
       id: 3,
-      role: "Content & SEO",
-      icon: Edit3,
+      role: "Graphic Design",
+      icon: Palette,
       status: "Available",
       position: { x: 80, y: 80 }
     },
     {
       id: 4,
-      role: "Website Design",
-      icon: Globe,
+      role: "Content & SEO",
+      icon: Edit3,
       status: "Available",
       position: { x: 20, y: 80 }
     },
     {
       id: 5,
-      role: "Admin Support",
-      icon: CheckSquare,
+      role: "Digital Marketing",
+      icon: TrendingUp,
       status: "Available",
       position: { x: 50, y: 10 }
     },
     {
       id: 6,
-      role: "Video Editing",
-      icon: Video,
+      role: "Admin Support",
+      icon: CheckSquare,
       status: "Available",
       position: { x: 90, y: 50 }
     }

@@ -14,13 +14,17 @@ const FinalCTA = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <Button variant="secondary" size="lg" className="w-full sm:w-auto bg-background text-primary hover:bg-background/90 text-lg px-8 py-4 h-auto">
-            Get Started Today
-            <ArrowRight className="ml-2" />
+          <Button variant="secondary" size="lg" className="w-full sm:w-auto bg-background text-primary hover:bg-background/90 text-lg px-8 py-4 h-auto" asChild>
+            <a href="https://calendly.com/angellawretta/30min" target="_blank" rel="noopener noreferrer">
+              Get Started Today
+              <ArrowRight className="ml-2" />
+            </a>
           </Button>
-          <Button variant="outline" size="lg" className="w-full sm:w-auto border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-8 py-4 h-auto">
-            <Calendar className="mr-2" />
-            Schedule a Free Consultation
+          <Button variant="outline" size="lg" className="w-full sm:w-auto border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-lg px-8 py-4 h-auto" asChild>
+            <a href="https://calendly.com/angellawretta/30min" target="_blank" rel="noopener noreferrer">
+              <Calendar className="mr-2" />
+              Schedule a Free Consultation
+            </a>
           </Button>
         </div>
         

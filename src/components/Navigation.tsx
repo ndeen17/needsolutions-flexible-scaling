@@ -49,8 +49,10 @@ const Navigation = () => {
           
           {/* Desktop CTA Button */}
           <div className="hidden md:block">
-            <Button variant="default" size="default" className="text-sm lg:text-base px-4 lg:px-6">
-              Get Started Today
+            <Button variant="default" size="default" className="text-sm lg:text-base px-4 lg:px-6" asChild>
+              <a href="https://calendly.com/angellawretta/30min" target="_blank" rel="noopener noreferrer">
+                Get Started Today
+              </a>
             </Button>
           </div>
 
@@ -109,8 +111,11 @@ const Navigation = () => {
                   size="default" 
                   className="w-full"
                   onClick={handleLinkClick}
+                  asChild
                 >
-                  Get Started Today
+                  <a href="https://calendly.com/angellawretta/30min" target="_blank" rel="noopener noreferrer">
+                    Get Started Today
+                  </a>
                 </Button>
               </div>
             </div>

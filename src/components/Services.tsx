@@ -3,19 +3,33 @@ import {
   Globe, 
   Edit3, 
   Palette, 
-  Video, 
   CheckSquare,
   Code,
-  ArrowRight,
   Square,
   FileText,
   Target,
-  CheckCircle
+  CheckCircle,
+  Sparkles,
+  TrendingUp
 } from "lucide-react";
 import TeamHub from "./TeamHub";
 
 const Services = () => {
   const services = [
+    {
+      icon: Sparkles,
+      title: "AI Automation & Integration",
+      description: "Leverage AI to accelerate your workflows. We implement AI tools and automation to handle repetitive tasks, then our specialists refine the results.",
+      features: [
+        "AI workflow automation",
+        "ChatGPT and AI tool integration", 
+        "Custom AI assistant development",
+        "Process optimization with AI",
+        "AI-powered content generation",
+        "Intelligent data processing"
+      ],
+      linkText: "AI + Human expertise"
+    },
     {
       icon: Code,
       title: "Software Development",
@@ -45,18 +59,32 @@ const Services = () => {
       linkText: "Shift hours anytime"
     },
     {
+      icon: TrendingUp,
+      title: "Digital Marketing",
+      description: "Comprehensive digital marketing strategies powered by AI analytics and refined by marketing experts. Drive growth across all channels.",
+      features: [
+        "Social media management and strategy",
+        "AI-powered ad campaign optimization",
+        "Content marketing and SEO",
+        "Email marketing automation",
+        "Analytics and performance tracking",
+        "Influencer outreach and partnerships"
+      ],
+      linkText: "Scale up or down"
+    },
+    {
       icon: Edit3,
       title: "Content Creation & SEO",
-      description: "Compelling content that ranks and converts. Build authority and drive organic traffic with our content team.",
+      description: "Compelling content that ranks and converts. AI drafts quickly, our writers perfect it. Build authority and drive organic traffic.",
       features: [
-        "Blog writing and article creation",
+        "AI-assisted blog writing and articles",
         "SEO optimization and keyword research",
         "Website copywriting and landing pages",
         "Email marketing campaigns",
         "Social media content calendars",
         "Video scripts and captions"
       ],
-      linkText: "Scale up or down"
+      linkText: "AI speed + human polish"
     },
     {
       icon: Globe,
@@ -85,20 +113,6 @@ const Services = () => {
         "CRM and database management"
       ],
       linkText: "Always available"
-    },
-    {
-      icon: Video,
-      title: "Video Editing & Production",
-      description: "Professional video content that engages your audience. From quick social clips to full productions.",
-      features: [
-        "Video editing and post-production",
-        "Motion graphics and animations",
-        "Social media video content",
-        "YouTube video optimization",
-        "Podcast editing and production",
-        "Subtitles and captions"
-      ],
-      linkText: "Flexible allocation"
     }
   ];
 
@@ -193,9 +207,8 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="flex items-center text-primary-foreground/90 font-medium text-sm">
+                <div className="text-primary-foreground/90 font-medium text-sm">
                   {service.linkText}
-                  <ArrowRight className="w-4 h-4 ml-2" />
                 </div>
               </div>
             ))}
@@ -203,18 +216,95 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Interactive Team Hub Section */}
+      {/* AI + Human Workforce Section */}
       <section className="py-24 px-4 bg-background">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-2 bg-gradient-to-r from-primary/20 to-primary/10 border-2 border-primary/30 text-primary rounded-full text-sm font-bold mb-6">
+              <Sparkles className="w-4 h-4 inline mr-2" />
+              AI + Human Workforce
+            </span>
+            <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+              The Perfect Balance of <span className="text-primary">Speed & Accuracy</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              We integrate AI into every service to maximize efficiency. AI handles the basic tasks instantly, our specialists review and enhance for perfection.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto mb-16">
+            <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-8 rounded-3xl border-2 border-primary/20">
+              <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center mb-6">
+                <Sparkles className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">AI for Speed</h3>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-primary mr-3 mt-1 flex-shrink-0" />
+                  <span>Instant first drafts and basic task completion</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-primary mr-3 mt-1 flex-shrink-0" />
+                  <span>Automated repetitive processes</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-primary mr-3 mt-1 flex-shrink-0" />
+                  <span>Quick data analysis and insights</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-primary mr-3 mt-1 flex-shrink-0" />
+                  <span>Rapid content generation</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-accent/10 to-accent/5 p-8 rounded-3xl border-2 border-accent/20">
+              <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mb-6">
+                <Users className="w-8 h-8 text-accent" />
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Humans for Accuracy</h3>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-accent mr-3 mt-1 flex-shrink-0" />
+                  <span>Expert review and quality enhancement</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-accent mr-3 mt-1 flex-shrink-0" />
+                  <span>Strategic thinking and creativity</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-accent mr-3 mt-1 flex-shrink-0" />
+                  <span>Brand voice and consistency</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-accent mr-3 mt-1 flex-shrink-0" />
+                  <span>Complex problem-solving</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              This hybrid approach means you get work delivered <strong className="text-foreground">3x faster</strong> without sacrificing quality. 
+              AI eliminates the grunt work, while our specialists ensure every deliverable meets the highest standards.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Team Hub Section */}
+      <section className="py-24 px-4 bg-muted/30">
         <div className="container mx-auto">
           <div className="text-center mb-20">
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
               Your Flexible Team Structure
             </span>
             <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Meet Your <span className="text-primary">Extended Team</span>
+              Meet Your <span className="text-primary">AI + Human</span> Extended Team
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Every specialist is carefully selected and continuously trained. 
+              Every specialist is carefully selected, continuously trained, and equipped with AI tools. 
               Drag them around to see how our flexible model works for your projects.
             </p>
           </div>
