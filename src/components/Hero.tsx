@@ -18,12 +18,6 @@ const Hero = () => {
           <span className="text-primary"> Is Ready</span>
         </h1>
         
-        <div className="mb-8">
-          <span className="inline-block px-6 py-3 bg-gradient-to-r from-primary/20 to-primary/10 border-2 border-primary/30 text-primary rounded-full text-lg font-bold">
-            AI + Human Workforce
-          </span>
-        </div>
-        
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-4xl mx-auto">
           We combine <strong className="text-foreground">AI speed</strong> with <strong className="text-foreground">human expertise</strong>. Our AI handles basic tasks instantly, while our skilled specialists review and enhance for perfect results. 
           <strong className="text-foreground"> Speed and accuracy, guaranteed.</strong>
