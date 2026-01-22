@@ -6,8 +6,8 @@ import {
   BookOpen,
   Code,
   Palette,
-  Edit3,
-  FileText,
+  Globe,
+  Target,
   ArrowRight,
   Calendar,
   Sparkles
@@ -17,12 +17,11 @@ import TeamHub from "./TeamHub";
 
 const WhyUs = () => {
   const teamMembers = [
-    { icon: Code, title: "AI Specialists" },
+    { icon: Sparkles, title: "AI Specialists" },
     { icon: Code, title: "Software Developers" },
     { icon: Palette, title: "Graphic Designers" },
-    { icon: Edit3, title: "Content Writers" },
-    { icon: TrendingUp, title: "Digital Marketers" },
-    { icon: FileText, title: "Admin Specialists" }
+    { icon: Globe, title: "Web Developers" },
+    { icon: Target, title: "Product Managers" }
   ];
 
   return (

@@ -2,9 +2,8 @@ import {
   Users, 
   Code, 
   Palette, 
-  Edit3, 
-  Globe, 
-  CheckSquare,
+  Globe,
+  Target,
   User,
   CheckCircle,
   FileText,
@@ -14,7 +13,6 @@ import {
   DollarSign,
   ArrowRight,
   Calendar,
-  TrendingUp,
   Sparkles
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -64,7 +62,7 @@ const OurTeam = () => {
         "React, Vue, Angular experts",
         "Node.js, Python, PHP developers", 
         "iOS and Android developers",
-        "WordPress Experts"
+        "API integration specialists"
       ]
     },
     {
@@ -79,37 +77,25 @@ const OurTeam = () => {
       ]
     },
     {
-      icon: TrendingUp,
-      title: "Digital Marketing Team",
-      description: "Marketing strategists who drive growth across all digital channels using AI-powered analytics and human creativity.",
+      icon: Globe,
+      title: "Web Development Team",
+      description: "Website specialists who build beautiful, high-converting websites that grow your business.",
       features: [
-        "Social media managers",
-        "Ad campaign specialists",
-        "Marketing strategists",
-        "Analytics experts"
+        "WordPress experts",
+        "E-commerce specialists",
+        "Landing page designers",
+        "Website optimization experts"
       ]
     },
     {
-      icon: Edit3,
-      title: "Content Team",
-      description: "Writers and SEO experts who craft compelling content that ranks well and converts visitors into customers. AI drafts, humans perfect.",
+      icon: Target,
+      title: "Product Management Team",
+      description: "Strategic product experts who help you build the right product and achieve product-market fit.",
       features: [
-        "Technical writers",
-        "SEO specialists",
-        "Copywriters",
-        "Content strategists"
-      ]
-    },
-    {
-      icon: CheckSquare,
-      title: "Admin Team",
-      description: "Administrative professionals who keep your business operations running smoothly and efficiently.",
-      features: [
-        "Executive assistants",
-        "Data entry specialists",
-        "Customer support reps",
-        "Research analysts",
-        "Bookkeeping assistants"
+        "Product strategists",
+        "Market research analysts",
+        "User research experts",
+        "Product analytics specialists"
       ]
     }
   ];
