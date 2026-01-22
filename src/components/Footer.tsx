@@ -24,6 +24,7 @@ const Footer = () => {
               <li>Software Development</li>
               <li>Graphic Design</li>
               <li>Web Development</li>
+              <li>Product Management</li>
             </ul>
           </div>
           

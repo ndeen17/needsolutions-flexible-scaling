@@ -69,6 +69,20 @@ const Services = () => {
         "Performance optimization"
       ],
       linkText: "Adjust focus weekly"
+    },
+    {
+      icon: Target,
+      title: "Product Management & Research",
+      description: "Strategic product development from concept to market fit. We help you build the right product, validate market demand, and optimize for growth.",
+      features: [
+        "Product strategy and roadmap planning",
+        "Market research and competitive analysis",
+        "Product-market fit validation",
+        "User research and feedback analysis",
+        "Feature prioritization and planning",
+        "Product analytics and insights"
+      ],
+      linkText: "Scale with your product"
     }
   ];
 
