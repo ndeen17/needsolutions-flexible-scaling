@@ -19,8 +19,8 @@ const Hero = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-4xl mx-auto">
-          We combine <strong className="text-foreground">AI speed</strong> with <strong className="text-foreground">human expertise</strong>. Our AI handles basic tasks instantly, while our skilled specialists review and enhance for perfect results. 
-          <strong className="text-foreground"> Speed and accuracy, guaranteed.</strong>
+          Get designers, developers, and AI automation specialists working on your projects. 
+          <strong className="text-foreground"> Flexible hours you can shuffle between team members as your needs change.</strong> Your project manager handles all delegation - just send us your tasks.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">

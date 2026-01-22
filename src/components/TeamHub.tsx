@@ -2,10 +2,7 @@ import React, { useState, useRef, useCallback } from 'react';
 import { 
   Code, 
   Palette, 
-  Edit3, 
   Globe, 
-  TrendingUp, 
-  CheckSquare,
   User,
   Sparkles
 } from 'lucide-react';
@@ -35,10 +32,7 @@ const TeamHub = () => {
   const initialPositions = useRef([
     { x: 20, y: 20 },
     { x: 80, y: 20 },
-    { x: 80, y: 80 },
-    { x: 20, y: 80 },
-    { x: 50, y: 10 },
-    { x: 90, y: 50 }
+    { x: 80, y: 80 }
   ]);
   
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([
@@ -62,27 +56,6 @@ const TeamHub = () => {
       icon: Palette,
       status: "Available",
       position: { x: 80, y: 80 }
-    },
-    {
-      id: 4,
-      role: "Content & SEO",
-      icon: Edit3,
-      status: "Available",
-      position: { x: 20, y: 80 }
-    },
-    {
-      id: 5,
-      role: "Digital Marketing",
-      icon: TrendingUp,
-      status: "Available",
-      position: { x: 50, y: 10 }
-    },
-    {
-      id: 6,
-      role: "Admin Support",
-      icon: CheckSquare,
-      status: "Available",
-      position: { x: 90, y: 50 }
     }
   ]);
 

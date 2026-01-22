@@ -1,7 +1,6 @@
 import { 
   Users, 
   Globe, 
-  Edit3, 
   Palette, 
   CheckSquare,
   Code,
@@ -9,8 +8,7 @@ import {
   FileText,
   Target,
   CheckCircle,
-  Sparkles,
-  TrendingUp
+  Sparkles
 } from "lucide-react";
 import TeamHub from "./TeamHub";
 
@@ -59,34 +57,6 @@ const Services = () => {
       linkText: "Shift hours anytime"
     },
     {
-      icon: TrendingUp,
-      title: "Digital Marketing",
-      description: "Comprehensive digital marketing strategies powered by AI analytics and refined by marketing experts. Drive growth across all channels.",
-      features: [
-        "Social media management and strategy",
-        "AI-powered ad campaign optimization",
-        "Content marketing and SEO",
-        "Email marketing automation",
-        "Analytics and performance tracking",
-        "Influencer outreach and partnerships"
-      ],
-      linkText: "Scale up or down"
-    },
-    {
-      icon: Edit3,
-      title: "Content Creation & SEO",
-      description: "Compelling content that ranks and converts. AI drafts quickly, our writers perfect it. Build authority and drive organic traffic.",
-      features: [
-        "AI-assisted blog writing and articles",
-        "SEO optimization and keyword research",
-        "Website copywriting and landing pages",
-        "Email marketing campaigns",
-        "Social media content calendars",
-        "Video scripts and captions"
-      ],
-      linkText: "AI speed + human polish"
-    },
-    {
       icon: Globe,
       title: "Website Design & Development", 
       description: "Beautiful, high-converting websites that grow your business. From concept to launch, we handle it all.",
@@ -99,20 +69,6 @@ const Services = () => {
         "Performance optimization"
       ],
       linkText: "Adjust focus weekly"
-    },
-    {
-      icon: Users,
-      title: "Administrative Support",
-      description: "Keep your business running smoothly with professional admin support. We handle the details so you can focus on growth.",
-      features: [
-        "Email and calendar management",
-        "Data entry and research",
-        "Customer service and support",
-        "Document preparation",
-        "Travel planning and booking",
-        "CRM and database management"
-      ],
-      linkText: "Always available"
     }
   ];
 

@@ -21,11 +21,9 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-background/80">
               <li>AI Automation</li>
-              <li>Digital Marketing</li>
-              <li>Web Development</li>
-              <li>Content & SEO</li>
+              <li>Software Development</li>
               <li>Graphic Design</li>
-              <li>Admin Support</li>
+              <li>Web Development</li>
             </ul>
           </div>
           
